@@ -1,0 +1,128 @@
+/*
+background-color: #fafafa;
+poppins and monserat
+*/
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+body{
+
+ background-color: #fafafa;
+ font-family: 'Poppins', sans-serif;
+}
+.all{
+ width: 75%;
+ margin: 0 auto;
+ margin-top: 40px;
+
+}
+header{
+ display: flex;
+ justify-content: space-between;
+}
+header div{
+ width: 37%;
+}
+header h3{
+ margin-bottom: 5px;
+}
+.main{
+ display: grid;
+ grid-template-columns: repeat(3,1fr) ;
+ grid-template-areas: 
+             "bill saba shae"
+             "bill saba shae"
+             "skylah griff stan"
+             "skylah griff stan";
+ column-gap: 4%;
+ row-gap: 50px;
+
+ margin-top: 70px;
+}
+img{
+ max-width: 92%;
+ margin-bottom: 8px;
+}
+.bill{
+ grid-area: bill;
+}
+.team div{
+ position: relative;
+ 
+}
+.team div p{
+ writing-mode: vertical-lr;
+ font-family: PT Serif;
+ position: absolute;
+ font-weight: bold;
+ top: 0;
+ right: 0px;
+ text-transform: uppercase;
+}
+
+.shae{
+ grid-area: shae;
+}
+.stan{
+ grid-area: stan;
+}
+.skylah{
+ grid-area: skylah;
+}
+.griff{
+ grid-area: griff;
+}
+.saba{
+ grid-area: saba;
+}
+.saba, .griff{
+ margin-top: 70px;
+}
+.tag{
+ margin-top: 50px;
+ text-align: center;
+}
+@media screen and (max-width: 830px){
+ .main{
+  row-gap: 0px;
+ }
+ .team div p{
+  right: -4px;
+ }
+}
+@media screen and (max-width:725px){
+ .all{
+  width: 95%;
+ }
+ .main{
+  display: flex;
+  flex-wrap: wrap;
+ 
+ }
+ header{
+  flex-direction: column;
+ }
+ header div{
+  width: 90%;
+ }
+ header h1{
+  margin-bottom: 40px;
+ }
+ header h3{
+  margin-bottom: 10px;
+ }
+ .griff{
+  margin: 0;
+ }
+ .saba, .skylah, .stan{
+  margin-top: 50px;
+ }
+ .team{
+  flex: 1 1 40%;
+ }
+ img{
+  min-height: 100%;
+ }
+}
